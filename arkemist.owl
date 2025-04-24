@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:schema="http://schema.org/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <schema:MusicGroup rdf:about="http://arkemist.store/ontology#Arkemist">
+    <schema:name>Arkemist - Sound Alchemist</schema:name>
+    <schema:alternateName>Akram Laamari</schema:alternateName>
+    <schema:url rdf:resource="https://arkemist.store"/>
+    <schema:genre>Trap, Hip-Hop, Rap, Jazz, Vintage World Music</schema:genre>
+    <schema:description>Arkemist is a music producer, singer, rapper, audio engineer, mixing and mastering engineer. Originally from Batna, Algeria (The 1020 City), based in Gatineau, Canada. Known for deep musical alchemy, turning sounds into gold by exploring vintage and world influences.</schema:description>
+    <schema:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arkemist0@gmail.com</schema:email>
+    <schema:sameAs rdf:resource="https://instagram.com/arkemist_"/>
+    <schema:sameAs rdf:resource="https://facebook.com/arkemist.fb"/>
+    <schema:sameAs rdf:resource="https://youtube.com/@Arkemist"/>
+    <schema:founder>
+      <foaf:Person rdf:about="http://arkemist.store/ontology#AkramLaamari">
+        <foaf:name>Akram Laamari</foaf:name>
+        <schema:birthPlace>Batna, Algeria</schema:birthPlace>
+        <schema:nationality>Algerian</schema:nationality>
+      </foaf:Person>
+    </schema:founder>
+    <schema:location>Gatineau, Canada</schema:location>
+    <schema:track>
+      <schema:MusicRecording rdf:about="http://arkemist.store/ontology#Doros">
+        <schema:name>Doros</schema:name>
+      </schema:MusicRecording>
+    </schema:track>
+    <schema:owns>Arkemist Sound</schema:owns>
+  </schema:MusicGroup>
+</rdf:RDF>
