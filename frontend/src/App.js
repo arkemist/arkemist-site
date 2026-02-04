@@ -17,14 +17,17 @@ function App() {
   useEffect(() => {
     // Smooth scrolling
     const smoothScroll = (e) => {
-      e.preventDefault();
-      const target = document.querySelector(e.target.getAttribute('href'));
-      if (target) {
-        gsap.to(window, {
-          duration: 1.2,
-          scrollTo: { y: target, offsetY: 80 },
-          ease: "power3.inOut"
-        });
+      const href = e.target.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const targetPosition = target.offsetTop - 80;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
       }
     };
 
