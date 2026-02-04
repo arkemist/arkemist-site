@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { services } from '../data/mockData';
-import { Check, X } from 'lucide-react';
+import { Check } from 'lucide-react';
 import BookingModal from './BookingModal';
 
 const Services = () => {
@@ -26,9 +26,6 @@ const Services = () => {
               key={service.id}
               className="bg-black border border-gray-800 p-8 hover:border-[#ff6b35] transition-all duration-300 group relative overflow-hidden"
             >
-              {/* Grain texture */}
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')] opacity-20"></div>
-
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
                 <p className="text-3xl font-bold text-[#ff6b35] mb-4">{service.price}</p>
@@ -59,11 +56,13 @@ const Services = () => {
         </div>
       </div>
 
-      <BookingModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        service={selectedService}
-      />
+      {isModalOpen && (
+        <BookingModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          service={selectedService}
+        />
+      )}
     </section>
   );
 };
